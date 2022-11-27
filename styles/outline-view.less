@@ -1,0 +1,70 @@
+.outline-view {
+    margin-bottom: 12px;
+
+    .heading {
+        padding: 0 8px 4px 8px;
+        color: @color-grey-500;
+
+        .collapse-button {
+            margin-right: 0;
+        }
+    }
+
+    .item-container {
+        display: block;
+        position: relative;
+
+        .disclosure-triangle {
+            position: absolute;
+        }
+
+        .item {
+            padding-right: 8px;
+            padding-left: 24px;
+            height: 28px;
+            line-height: 28px;
+
+            .name {
+                margin-right: auto;
+                font-size: 13px;
+            }
+
+            .item-count-box {
+                box-shadow: none;
+                min-width: 0;
+                height: 18px;
+                line-height: 18px;
+                border-radius: 100px;
+                padding: 0 0.7em;
+            }
+
+            .item-count-box,
+            .item-count-box.alt-count {
+                background: @color-gray-300;
+                color: @color-grey-800;
+            }
+
+            img.content-mask,
+            &.selected img.content-mask {
+                background: @color-blue-3;
+            }
+
+            &.selected {
+                border-radius: @border-radius-base;
+
+                .item-count-box,
+                .item-count-box.alt-count {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.account-sidebar-sections {
+    padding: 0 8px;
+}
+
+.account-switcher {
+    top: -4px;
+}

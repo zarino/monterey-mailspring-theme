@@ -1,0 +1,83 @@
+#message-list {
+    background: @white;
+
+    .scroll-region-content-inner {
+        padding: 16px !important;
+    }
+
+    .message-subject-wrap {
+        line-height: 1.4;
+        padding: 0;
+        margin: 0 auto 16px auto;
+    }
+
+    .thread-injected-mail-labels {
+        margin-top: 1px;
+    }
+
+    .message-subject {
+        font-weight: @font-weight-medium;
+    }
+
+    .message-item-wrap {
+        padding-bottom: 16px;
+
+        .message-item-white-wrap {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 1px solid @border-color-divider;
+        }
+
+        &.collapsed {
+            .message-item-white-wrap {
+                background: @white;
+                box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        &.before-reply-area {
+            .message-item-white-wrap {
+                border-bottom: none;
+                border-radius-bottom-right: 0;
+                border-radius-bottom-left: 0;
+            }
+        }
+    }
+
+    .footer-reply-area-wrap {
+        margin-bottom: 16px;
+        margin-top: 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid @border-color-divider;
+        border-bottom: 1px solid @border-color-divider;
+        border-left: 1px solid @border-color-divider;
+    }
+
+    .show-hidden-messages {
+        margin-bottom: 16px;
+        padding: 8px 16px;
+        background: @color-grey-200;
+    }
+}
+
+.mail-label {
+    padding: 0px 8px;
+    line-height: 20px;
+
+    &.removable {
+        .x {
+            top: -2px;
+        }
+    }
+}
+
+.column-MessageListSidebar {
+    background: @color-grey-100;
+}
+
+.sidebar-participant-picker {
+    padding: 16px 16px 0 16px;
+}
+
+.sidebar-section {
+    margin: 16px;
+}

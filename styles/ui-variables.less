@@ -4,49 +4,47 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-va
 */
 @import "base/ui-variables";
 
-@gray-base: #ffffff;
-@gray-darker: darken(@gray-base, 13.5%);
-@gray-dark: darken(@gray-base, 20%);
-@gray: darken(@gray-base, 33.5%);
-@gray-light: darken(@gray-base, 46.7%);
-@gray-lighter: darken(@gray-base, 92.5%);
-@white: #0a0a0a;
+@color-grey-100: #fdfdfd; // default macOS toolbar background
+@color-grey-200: #e9e9e9; // default macOS sidebar background
+@color-gray-300: #dedede; // default macOS ui borders, mail sidebar unread count bubble background
+@color-grey-400: #d0d0d0; // mail sidebar selected item background
+@color-grey-500: #a9a9a9; // default macOS sidebar subheading color 
+@color-grey-600: #7e7e7e; // mail list item muted text color
+@color-grey-800: #484848; // default macOS sidebar text color
+@color-grey-900: #272727; // default macOS list item text color
 
-@accent-primary: #58b660;
-@accent-primary-dark: darken(@accent-primary, 10%);
+@color-blue-1: #3478f7; // macOS mail unread dot background
+@color-blue-2: #2861d9; // selected list item background
+@color-blue-3: #0373f8; // mail sidebar icons colour
 
-@background-primary: #212121;
-@background-off-primary: #212121;
-@background-secondary: #121212;
-@background-tertiary: #6d7987;
+@blue-dark: @color-blue-2;
+@blue: @color-blue-2;
+@blue-light: @color-blue-3;
 
-@border-color-primary: lighten(@background-primary, 10%);
-@border-color-secondary: lighten(@background-secondary, 10%);
-@border-color-tertiary: lighten(@background-tertiary, 10%);
-@border-color-divider: @border-color-secondary;
+@background-primary: @white;
+@background-off-primary: @color-grey-100;
+@background-secondary: @color-grey-200;
 
-@text-color: #eee;
-@text-color-subtle: fadeout(@text-color, 20%);
-@text-color-very-subtle: fadeout(@text-color, 40%);
-@text-color-inverse: white;
-@text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
-@text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
-@text-color-heading: #fff;
+@border-color-divider: @color-gray-300;
 
-@text-color-link: @accent-primary;
-@text-color-link-hover: @accent-primary-dark;
-@text-color-link-active: @accent-primary-dark;
+@font-family-sans-serif: system-ui, 'Helvetica', sans-serif;
 
-@btn-default-bg-color: lighten(@background-primary, 5%);
-@dropdown-default-bg-color: #404040;
+@font-weight-thin: 200;
+@font-weight-blond: 300;
+@font-weight-normal: 500;
+@font-weight-medium: 600;
+@font-weight-semi-bold: 700;
+@headings-font-weight: 700;
 
-@input-bg: #2e2e2e;
-@input-border: @border-color-divider;
+@border-radius-base: 4px;
+@border-radius-large: 6px;
+@border-radius-small: 3px;
 
-@list-bg: #333;
-@list-border: #383838;
-@list-selected-color: @text-color-inverse;
-@list-focused-color: @text-color;
+@btn-shadow: none;
 
-@toolbar-background-color: #121212;
-@panel-background-color: #121212;
+@toolbar-background-color: @color-grey-100;
+
+@panel-background-color: @color-grey-200;
+@source-list-bg: @color-grey-200;
+@source-list-active-bg: @color-grey-400;
+@source-list-active-color: @color-grey-800;

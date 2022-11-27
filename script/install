@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# abort on any errors
+set -e
+
+# check that we are in the expected directory
+cd `dirname $0`/..
+
+SCRIPT=`basename $0`
+MAILSPRING_DIR="Mailspring"
+THEME_DIR=`pwd`
+THEME_NAME=`basename "$THEME_DIR"`
+
+usage()
+{
+    cat <<EOF
+Usage: $SCRIPT [--dev] [--help]"
+
+Installs the theme into Mailspring, using a symbolic link,
+for testing during theme development.
+
+optional arguments:
+  --dev         install into the Mailspring-dev directory,
+                for use when running Mailspring with Debug Flags
+  -h, --help    show this message and exit
+
+examples:
+  $SCRIPT
+  $SCRIPT --dev
+EOF
+}
+
+while [ "$1" != "" ]; do
+    case $1 in
+        --dev )             MAILSPRING_DIR="Mailspring-dev"
+                            ;;
+        -h | --help )       usage
+                            exit
+                            ;;
+    esac
+    shift
+done
+
+PACKAGES_DIR="$HOME/Library/Application Support/$MAILSPRING_DIR/packages"
+
+mkdir -p "$PACKAGES_DIR"
+if [ ! -L "$PACKAGES_DIR/$THEME_NAME" ]; then
+    ln -s "$THEME_DIR" "$PACKAGES_DIR/$THEME_NAME"
+fi

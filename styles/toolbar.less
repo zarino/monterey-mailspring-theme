@@ -1,0 +1,70 @@
+.sheet-toolbar {
+    height: 53px !important;
+    min-height: 53px !important;
+    max-height: 53px !important;
+    border-bottom: none;
+
+    .btn-toolbar {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 0;
+        line-height: 26px;
+        height: 26px;
+        box-shadow: none !important; // override even when body.is-blurred
+        background: transparent;
+        border: 0.5px solid @border-color-divider;
+
+        img.content-mask {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.sheet-toolbar-container > * {
+    height: 100%;
+}
+
+.sheet-toolbar .item-container {
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    & > * {
+        margin-top: 0 !important;
+    }
+}
+
+.toolbar-RootSidebar,
+.toolbar-ContactsSidebar {
+    background: @source-list-bg;
+
+    .btn-toolbar {
+        border-color: @color-grey-500;
+    }
+}
+
+.toolbar-window-controls {
+    margin-left: 8px;
+}
+
+.toolbar-ThreadList,
+.toolbar-MessageList,
+.toolbar-MessageListSidebar,
+.toolbar-ContactsList,
+.toolbar-ContactsDetail {
+    background: @white;
+    border-left: 0.5px solid @border-color-divider;
+    border-bottom: 0.5px solid @border-color-divider;
+}
+
+.thread-search-bar,
+.contact-search {
+    padding: 0 8px;
+    margin: 0 8px;
+    line-height: 26px;
+    height: 26px;
+}
+
+.contact-search {
+    margin: 0;
+}
