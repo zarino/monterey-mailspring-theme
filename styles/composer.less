@@ -7,3 +7,17 @@
 .composer-action-bar-content {
     align-items: center;
 }
+
+.composer-participant-field {
+    .button-dropdown {
+        padding-top: 10px; // down from 11px
+
+        // Remove usual .button-dropdown padding,
+        // to match height of .token elements above
+        .primary-item,
+        .only-item {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
