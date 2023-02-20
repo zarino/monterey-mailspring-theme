@@ -38,6 +38,26 @@
     }
 }
 
+.sheet-toolbar .selection-bar {
+    height: auto;
+
+    .absolute {
+        position: static;
+        height: auto;
+        border: none;
+        background: transparent;
+
+        .inner {
+            position: static;
+            align-items: center;
+
+            .centered {
+                line-height: auto;
+            }
+        }
+    }
+}
+
 .toolbar-RootSidebar,
 .toolbar-ContactsSidebar {
     background: @source-list-bg;
